@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  error:
+    include-stacktrace: never
+jms:
+  jwt:
+    security:
+      enabled: true
+    timezone: "America/Bogota"
+    issuer: "PracticaTest"
+    token:
+      auth:
+        path: "/api/v1/oauth/client_credential/accesstoken"
+      secret: "token privado test"
+      expires-in: 60
+    excluded:      
+      path: "/api/v1/multi"
